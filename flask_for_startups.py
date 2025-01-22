@@ -26,6 +26,5 @@ app = create_app(os.getenv("FLASK_CONFIG") or "dev")
 def make_shell_context():
     return dict(db=db_manager, User=User, Account=Account, Role=Role, UserRole=UserRole)
 
-with app.app_context():
-    db_manager.create_all()
+
 
